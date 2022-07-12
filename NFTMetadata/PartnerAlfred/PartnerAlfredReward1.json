@@ -1,0 +1,26 @@
+{
+  "title": "Reward Metadata",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "2 Coffes for 1"
+    },
+    "description": {
+      "type": "string",
+      "description": "This Reward allows you to get a free Coffee, Enjoy!"
+    },
+    "partner": {
+      "type": "string",
+      "description": "PartnerAlfred"
+    },
+    "id": {
+      "type": "integer",
+      "description": 1
+    },
+    "image": {
+      "type": "string",
+      "description": "ipfs://QmZAkrSLUgxRFekYT2rRDxD1wXWVCrQ26AEXo4H6JiP51j"
+    }
+  }
+}
