@@ -41,7 +41,7 @@ public class SendRewardController {
 
 
     //Send Email with Normal reward
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PostMapping(path="/sendNormalEmail") // Map ONLY POST Requests
     public @ResponseBody String sendReward (@RequestBody UserPostDTO userPostDTO){
         User userToReceiveReward = DTOMapper.INSTANCE.convertUserPostDTOtoEntity(userPostDTO);
@@ -56,7 +56,7 @@ public class SendRewardController {
     }
 
     //Send Email with NFT Reward
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PostMapping(path="/sendNFTEmail") // Map ONLY POST Requests
     public @ResponseBody String sendNFTMail (@RequestBody NFTMailPutDTO nftMailPutDTO){
         NFTMail nftMail = DTOMapper.INSTANCE.convertNFTMailPutDTOtoEntity(nftMailPutDTO);
@@ -72,7 +72,7 @@ public class SendRewardController {
 
 
     //Get metadata for minting & save it in db
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @GetMapping(path="/metadata/{partnerWhereRewardReceived}") // Map ONLY POST Requests
     public @ResponseBody
     Object getMetadata (@PathVariable String partnerWhereRewardReceived) throws IOException, JSONException, URISyntaxException, ParseException {
@@ -115,7 +115,7 @@ public class SendRewardController {
     }
 
     //Delete the minted metadata
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PutMapping(path="/metadata/delete") // Map ONLY POST Requests
     public @ResponseBody int deleteMetadata(@RequestBody MetadataPinataPutDTO metadataPinataPutDTO) throws IOException {
         MetadataPinata metadataPinata = DTOMapper.INSTANCE.convertMetadataPinataPutDTOtoEntity(metadataPinataPutDTO);
@@ -130,7 +130,7 @@ public class SendRewardController {
     }
 
     //Check if the reward was already redeemed (NFT)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PutMapping(path="/isNFTRedeemed") // Map ONLY POST Requests
     public @ResponseBody
     boolean isNFTRedeemed(@RequestBody NFTisRedeemedPutDTO nfTisRedeemedPutDTO){
@@ -143,7 +143,7 @@ public class SendRewardController {
     }
 
     //Redeem the reward (NFT)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PutMapping(path="/redeemNFT") // Map ONLY POST Requests
     public @ResponseBody
     String redeemNFT(@RequestBody NFTRedeemPutDTO nftRedeemPutDTO){
@@ -161,7 +161,7 @@ public class SendRewardController {
     }
 
     //Check if the reward was already redeemed (Normal)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PutMapping(path="/isNormalRedeemed") // Map ONLY POST Requests
     public @ResponseBody
     boolean isNormalRedeemed(@RequestBody NFTisRedeemedPutDTO nfTisRedeemedPutDTO){
@@ -174,7 +174,7 @@ public class SendRewardController {
     }
 
     //Redeem the reward (Normal)
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://mzrewards-client.herokuapp.com/")
     @PutMapping(path="/redeemNormal") // Map ONLY POST Requests
     public @ResponseBody
     String redeemNormal(@RequestBody NFTRedeemPutDTO nftRedeemPutDTO){
