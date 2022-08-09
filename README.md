@@ -1,3 +1,5 @@
+# How to use the Application
+
 The best way to try the prototype out would be via the following link:
 
 >https://mzrewards-client.herokuapp.com/blockchainReward/partnerHonig
