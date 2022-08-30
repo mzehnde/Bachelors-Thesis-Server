@@ -13,3 +13,7 @@ The Frontend for the prototype can be found in the following repo:
 The Address of the smart contract used to mint the NFT:
 
 >0x6dadaf4b1ade44337ae315c82aa7e6f98758f230 (can be tracked on Etherscan, Rinkeby Test Network)
+
+Url for the onboarding form:
+
+>https://mzrewards-client.herokuapp.com/onboarding
